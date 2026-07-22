@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎬 MovieTicket</h1>
+            <nav>
+                <button id="homeBtn" class="active">Movies</button>
+                <button id="myBookingsBtn">My Bookings</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Movies Grid -->
+        <section id="moviesSection">
+            <h2>Now Showing</h2>
+            <div id="moviesGrid" class="movies-grid"></div>
+        </section>
+
+        <!-- Showtimes Section -->
+        <section id="showtimesSection" style="display:none;">
+            <button id="backToMovies" class="back-btn">← Back to Movies</button>
+            <h2 id="selectedMovieTitle"></h2>
+            <div id="showtimesList"></div>
+        </section>
+
+        <!-- Seat Selection Section -->
+        <section id="seatsSection" style="display:none;">
+            <button id="backToShowtimes" class="back-btn">← Back to Showtimes</button>
+            <h2 id="seatSelectionTitle"></h2>
+            <div class="screen">SCREEN</div>
+            <div id="seatsContainer" class="seats-container"></div>
+            <div class="seat-legend">
+                <div><span class="seat available"></span> Available</div>
+                <div><span class="seat selected"></span> Selected</div>
+                <div><span class="seat booked"></span> Booked</div>
+            </div>
+            <div id="bookingSummary">
+                <p>Selected Seats: <span id="selectedSeatsDisplay">None</span></p>
+                <p>Total: $<span id="totalPrice">0.00</span></p>
+                <button id="confirmBookingBtn" class="confirm-btn">Confirm Booking</button>
+            </div>
+        </section>
+
+        <!-- My Bookings Section -->
+        <section id="myBookingsSection" style="display:none;">
+            <h2>My Bookings</h2>
+            <div id="bookingsList"></div>
+        </section>
+    </main>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
